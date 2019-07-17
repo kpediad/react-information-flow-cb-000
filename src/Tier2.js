@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getRandomColor, getReducedColor } from './randomColorGenerator.js'
+import { getReducedColor } from './randomColorGenerator.js'
 import Tier3 from './Tier3'
 
 
@@ -12,10 +12,7 @@ export default class Tier2 extends Component {
     }
   }
 
-  handleChildClick = (event) => {
-    event.stopPropagation();
-    this.setState({childColor: getRandomColor()});
-  }
+  
 
   componentWillReceiveProps(nextProps) {
     this.setState({childColor: getReducedColor(nextProps.color)});
