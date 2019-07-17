@@ -13,7 +13,7 @@ export default class Tier1 extends Component {
       childColor: getReducedColor(initialColor)
     }
   }
-  handleClick = (event) => {
+  handleClick = () => {
     const color = getRandomColor();
     this.setState({color: color, childColor: getReducedColor(color)});
   }
