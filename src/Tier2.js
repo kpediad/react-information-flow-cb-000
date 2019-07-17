@@ -23,8 +23,8 @@ export default class Tier2 extends Component {
     // present in our solution. What should they be replaced with?
     return (
       <div onClick={this.props.handleChildClick} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
-        <Tier3 color={this.state.childColor} handleChildClick={this.props.handleChildClick.bind(this)}/>
-        <Tier3 color={this.state.childColor} handleChildClick={this.props.handleChildClick.bind(this)}/>
+        <Tier3 color={this.state.childColor} handleChildClick={this.props.handleChildClick}/>
+        <Tier3 color={this.state.childColor} handleChildClick={this.props.handleChildClick}/>
       </div>
     )
   }
