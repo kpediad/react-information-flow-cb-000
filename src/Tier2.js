@@ -15,6 +15,7 @@ export default class Tier2 extends Component {
   handleChildClick = (event) => {
     event.stopPropagation();
     this.setState({childColor: getRandomColor()});
+  }
 
   componentWillReceiveProps(nextProps) {
     this.setState({childColor: getReducedColor(nextProps.color)});
