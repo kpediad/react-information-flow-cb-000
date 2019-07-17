@@ -24,7 +24,7 @@ export default class Tier1 extends Component {
     return (
       <div onClick={this.handleClick} className="tier1" style={{backgroundColor: this.state.color, color: this.state.color}}>
         <Tier2 color={this.state.childColor} callback={this.handleClick}/>
-        <Tier2 color={this.state.childColor} callback={this.handleClick}S/>
+        <Tier2 color={this.state.childColor} callback={this.handleClick}/>
       </div>
     )
   }
