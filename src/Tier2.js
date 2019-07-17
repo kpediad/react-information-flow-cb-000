@@ -22,7 +22,7 @@ export default class Tier2 extends Component {
     // hard coded color values have been added below, though they won't be
     // present in our solution. What should they be replaced with?
     return (
-      <div onClick={this.handleChildClick} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
+      <div onClick={this.props.handleChildClick} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
         <Tier3 color={this.state.childColor} handleChildClick={this.props.handleChildClick.bind(this)}/>
         <Tier3 color={this.state.childColor} handleChildClick={this.props.handleChildClick.bind(this)}/>
       </div>
