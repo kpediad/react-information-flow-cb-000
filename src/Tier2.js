@@ -12,7 +12,7 @@ export default class Tier2 extends Component {
     }
   }
 
-  
+
 
   componentWillReceiveProps(nextProps) {
     this.setState({childColor: getReducedColor(nextProps.color)});
