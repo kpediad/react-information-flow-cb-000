@@ -12,6 +12,10 @@ export default class Tier2 extends Component {
     }
   }
 
+  handleChildClick = (event) => {
+    event.stopPropagation();
+    this.setState({childColor: getRandomColor()});
+
   componentWillReceiveProps(nextProps) {
     this.setState({childColor: getReducedColor(nextProps.color)});
   }
@@ -20,9 +24,9 @@ export default class Tier2 extends Component {
     // hard coded color values have been added below, though they won't be
     // present in our solution. What should they be replaced with?
     return (
-      <div onClick={this.props.callback.bind(this)} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
-        <Tier3 color={this.state.childColor} handleChildClick={this.props.callback}/>
-        <Tier3 color={this.state.childColor} handleChildClick={this.props.callback}/>
+      <div onClick={this.handleChildClick} className="tier2" style={{backgroundColor: this.props.color, color: this.props.color}}>
+        <Tier3 color={this.state.childColor} handleChildClick={this.handleChildClick}/>
+        <Tier3 color={this.state.childColor} handleChildClick={this.handleChildClick}/>
       </div>
     )
   }
